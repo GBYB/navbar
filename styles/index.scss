@@ -1,0 +1,71 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(248, 173, 165);
+  .left {
+    h1 {
+      &:hover {
+        border-bottom: 2px solid white;
+        cursor: pointer;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      // &:hover {
+      //   border-bottom: 2px solid white;
+      //   cursor: pointer;
+      // }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .navContainer {
+    .nav {
+      justify-content: space-between;
+      .right {
+        width: auto;
+        margin-right: 5%;
+      }
+      .left {
+        h1 {
+          font-size: 1.5rem;
+        }
+        margin-left: 5%;
+      }
+    }
+    .dropDown {
+      background-color: rgb(250, 217, 214);
+      display: flex;
+      flex-direction: column;
+      h3 {
+        animation: fadeIn 5s;
+
+        width: fit-content;
+        &:first-child {
+          margin-top: 0;
+        }
+        margin-top: 1%;
+        margin-bottom: 3%;
+        &:hover {
+          border-bottom: 2px solid white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
