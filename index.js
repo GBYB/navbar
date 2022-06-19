@@ -33,20 +33,20 @@ function display() {
     }
     // add effect on the elements
 
-    node = document.querySelector(".heading");
-    console.log(node);
-    node.onmouseover = () => {
-      let node = document.querySelector(".heading");
-      console.log(node);
+    // node = document.querySelector(".heading");
+    // console.log(node);
+    // node.onmouseover = () => {
+    //   let node = document.querySelector(".heading");
+    //   console.log(node);
 
-      node.style.borderBottom = "2px solid white";
-      node.style.cursor = "pointer";
-    };
+    //   node.style.borderBottom = "2px solid white";
+    //   node.style.cursor = "pointer";
+    // };
 
-    node.onmouseout = () => {
-      let node = document.querySelector(".heading");
-      node.style.borderBottom = "0";
-    };
+    // node.onmouseout = () => {
+    //   let node = document.querySelector(".heading");
+    //   node.style.borderBottom = "0";
+    // };
   } else {
     // clear elements on resize
     if (
