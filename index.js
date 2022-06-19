@@ -1,6 +1,6 @@
 function display() {
   if (screen.width > 425) {
-    // clear children of low display
+    // clear elements on resize
     if (
       document.querySelector(".right").contains(document.querySelector(".list"))
     ) {
@@ -12,6 +12,8 @@ function display() {
       )
         document.querySelector(".dropDown").remove();
     }
+
+    // add once the elements of the navbar
     if (
       !document
         .querySelector(".right")
@@ -29,6 +31,7 @@ function display() {
       addItem("About Us");
       addItem("Carreers");
     }
+    // add effect on the elements
 
     node = document.querySelector(".heading");
     console.log(node);
@@ -45,7 +48,7 @@ function display() {
       node.style.borderBottom = "0";
     };
   } else {
-    // clear children of big display
+    // clear elements on resize
     if (
       document
         .querySelector(".right")
@@ -53,6 +56,8 @@ function display() {
     ) {
       document.querySelectorAll(".heading").forEach((el) => el.remove());
     }
+
+    // add once the elements of the navbar
     if (
       !document
         .querySelector(".right")
@@ -71,8 +76,8 @@ function display() {
   }
 }
 
+// display the dropdown
 function displayM() {
-  console.log("hello");
   let element = document.createElement("div");
   element.className = "dropDown";
   document.querySelector(".navContainer").appendChild(element);
@@ -99,9 +104,8 @@ function displayM() {
   node.onclick = rDisplayM;
 }
 
+// remove the dropdown
 function rDisplayM() {
-  console.log("bye");
-
   document.querySelector(".dropDown").remove();
   document.querySelector("#list").remove();
 
